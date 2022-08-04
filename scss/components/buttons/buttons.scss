@@ -1,0 +1,103 @@
+@import "../variables";
+
+// -----------------------------------------------------------------------------
+
+// ======================= VARIABLES
+// ============ Padding
+$btn_padding--xs: 4px 12px;
+$btn_padding--sm: 10px 30px;
+$btn_padding: 16px 46px;
+$btn_padding--lg: 20px 58px;
+// ============ Margins
+$btn_margin-x: 10px;
+$btn_margin-y: 20px;
+$btn-r-l-margins: calc(#{$btn_margin-x} * 2);
+// ============ Font size
+$btn_font_size: 14px;
+// ============ Font weight
+$btn_font_weight: 700;
+// ============ Border radius
+$btn_border_radius--sm: 4px;
+$btn_border_radius--md: 10px;
+$btn_border_radius--lg: 16px;
+// ============ Border width
+$btn_border_width: 1px;
+
+.btn {
+  display: inline-block;
+  //---------------------
+  border: none;
+  color: #fff;
+  background-color: $c_primary;
+  //---------------------
+  padding: $btn_padding;
+  margin-top: $btn_margin-y;
+  margin-bottom: $btn_margin-y;
+  margin-left: $btn_margin-x;
+  margin-right: $btn_margin-x;
+  //---------------------
+  font-family: $ff_primary;
+  font-size: $btn_font_size;
+  font-weight: $btn_font_weight;
+  //--------
+  border-width: $btn_border_width;
+  border-style: solid;
+  border-color: $c_primary;
+  //--------
+  transition: $transition;
+
+  &:hover {
+    background-color: $c_primary-600;
+  }
+  &:active {
+    background-color: $c_primary-800;
+    transition: all 5ms ease-in-out;
+  }
+
+  // -----------------------------------------------------------------------------
+  // ======================= Button dimensions
+  &-xs {
+    padding: $btn_padding--xs;
+  }
+  &-sm {
+    padding: $btn_padding--sm;
+  }
+  &-lg {
+    padding: $btn_padding--lg;
+  }
+  &-full-w {
+    width: calc(100% - #{$btn-r-l-margins});
+  }
+  // -----------------------------------------------------------------------------
+  // ======================= Button border radius
+  &-round {
+    &-s {
+      border-radius: $btn_border_radius--sm;
+    }
+    &-m {
+      border-radius: $btn_border_radius--md;
+    }
+    &-l {
+      border-radius: $btn_border_radius--lg;
+    }
+  }
+  &-circle {
+    border-radius: 120px;
+  }
+
+  // -----------------------------------------------------------------------------
+  // ======================= Button Outline
+  &-outlined {
+    background-color: transparent;
+    border-width: $btn_border_width;
+    border-style: solid;
+    border-color: $c_primary;
+    color: $c_primary;
+    &:hover {
+      background-color: $c_primary-transparent-10;
+    }
+    &:active {
+      background-color: $c_primary-transparent-20;
+    }
+  }
+}

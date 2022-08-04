@@ -1,0 +1,86 @@
+.btn {
+  display: inline-block;
+  border: none;
+  color: #fff;
+  background-color: #0054d1;
+  padding: 16px 46px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #0054d1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #0047b0;
+}
+
+.btn:active {
+  background-color: #003a90;
+  -webkit-transition: all 5ms ease-in-out;
+  transition: all 5ms ease-in-out;
+}
+
+.btn-xs {
+  padding: 4px 12px;
+}
+
+.btn-sm {
+  padding: 10px 30px;
+}
+
+.btn-lg {
+  padding: 20px 58px;
+}
+
+.btn-full-w {
+  width: calc(100% - calc(10px * 2));
+}
+
+.btn-round-s {
+  border-radius: 4px;
+}
+
+.btn-round-m {
+  border-radius: 10px;
+}
+
+.btn-round-l {
+  border-radius: 16px;
+}
+
+.btn-circle {
+  border-radius: 120px;
+}
+
+.btn-outlined {
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #0054d1;
+  color: #0054d1;
+}
+
+.btn-outlined:hover {
+  background-color: rgba(0, 84, 209, 0.1);
+}
+
+.btn-outlined:active {
+  background-color: rgba(0, 84, 209, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0;
+}
+/*# sourceMappingURL=components.css.map */

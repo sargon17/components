@@ -1,0 +1,12 @@
+// variables
+@import "./variables";
+
+// components
+@import "./buttons/buttons.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 0;
+}

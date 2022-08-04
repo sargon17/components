@@ -1,0 +1,31 @@
+// ======================= FONTS
+$ff_primary: "Open Sans", sans-serif;
+
+// ======================= COLORS
+// ============== Primary
+// ======== solid
+$c_primary-50: #69a4fa;
+$c_primary-100: #5e9bf6;
+$c_primary-200: #4689ed;
+$c_primary-300: #2f78e3;
+$c_primary-400: #1766da;
+$c_primary-500: #0054d1;
+$c_primary-600: #0047b0;
+$c_primary-700: #003a90;
+$c_primary-800: #003a90;
+$c_primary-900: #003a90;
+// ======== transparent
+$c_primary-transparent-10: rgba(0, 84, 209, 0.1);
+$c_primary-transparent-20: rgba(0, 84, 209, 0.2);
+$c_primary-transparent-30: rgba(0, 84, 209, 0.3);
+$c_primary-transparent-40: rgba(0, 84, 209, 0.4);
+$c_primary-transparent-50: rgba(0, 84, 209, 0.5);
+$c_primary-transparent-60: rgba(0, 84, 209, 0.6);
+$c_primary-transparent-70: rgba(0, 84, 209, 0.7);
+$c_primary-transparent-80: rgba(0, 84, 209, 0.8);
+$c_primary-transparent-90: rgba(0, 84, 209, 0.9);
+// ======== final
+$c_primary: $c_primary-500;
+
+// ======================= TRANSITIONS
+$transition: all 0.3s ease-in-out;
