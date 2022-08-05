@@ -14,6 +14,8 @@ $btn_margin-y: 20px;
 $btn-r-l-margins: calc(#{$btn_margin-x} * 2);
 // ============ Font size
 $btn_font_size: 14px;
+$btn_font_size--lg: 18px;
+
 // ============ Font weight
 $btn_font_weight: 700;
 // ============ Border radius
@@ -22,13 +24,27 @@ $btn_border_radius--md: 10px;
 $btn_border_radius--lg: 16px;
 // ============ Border width
 $btn_border_width: 1px;
+// ============ colors
+$btn_c_disabled: #5e5e5e;
+$btn_c_disabled_text: #898989;
+
+// %outlined {
+//   background-color: transparent;
+//   border-width: $btn_border_width;
+//   border-style: solid;
+// }
+
+@mixin outlined {
+  background-color: transparent;
+  border-width: $btn_border_width;
+  border-style: solid;
+}
 
 .btn {
   display: inline-block;
   //---------------------
   border: none;
   color: #fff;
-  background-color: $c_primary;
   //---------------------
   padding: $btn_padding;
   margin-top: $btn_margin-y;
@@ -53,6 +69,10 @@ $btn_border_width: 1px;
     background-color: $c_primary-800;
     transition: all 5ms ease-in-out;
   }
+  &:disabled {
+    background-color: $btn_c_disabled;
+    color: $btn_c_disabled_text;
+  }
 
   // -----------------------------------------------------------------------------
   // ======================= Button dimensions
@@ -64,6 +84,7 @@ $btn_border_width: 1px;
   }
   &-lg {
     padding: $btn_padding--lg;
+    font-size: $btn_font_size--lg;
   }
   &-full-w {
     width: calc(100% - #{$btn-r-l-margins});
@@ -86,18 +107,159 @@ $btn_border_width: 1px;
   }
 
   // -----------------------------------------------------------------------------
-  // ======================= Button Outline
-  &-outlined {
-    background-color: transparent;
-    border-width: $btn_border_width;
-    border-style: solid;
+  // ======================= Button Variants
+  &-primary {
+    background-color: $c_primary;
     border-color: $c_primary;
-    color: $c_primary;
     &:hover {
-      background-color: $c_primary-transparent-10;
+      background-color: $c_primary-600;
     }
     &:active {
-      background-color: $c_primary-transparent-20;
+      background-color: $c_primary-800;
+      transition: all 5ms ease-in-out;
+    }
+    &-outlined {
+      @include outlined;
+      color: $c_primary;
+
+      &:hover {
+        background-color: $c_primary-transparent-10;
+      }
+      &:active {
+        background-color: $c_primary-transparent-20;
+        transition: all 5ms ease-in-out;
+      }
+    }
+    &--shadow {
+      box-shadow: 0px 6px 4px -4px rgba(0, 44, 111, 0.4);
+    }
+  }
+  &-secondary {
+    background-color: $c_secondary;
+    border-color: $c_secondary;
+    &:hover {
+      background-color: $c_secondary-600;
+    }
+    &:active {
+      background-color: $c_secondary-800;
+      transition: all 5ms ease-in-out;
+    }
+    &-outlined {
+      @include outlined;
+      color: $c_secondary;
+      border-color: $c_secondary;
+
+      &:hover {
+        background-color: $c_secondary-transparent-10;
+      }
+      &:active {
+        background-color: $c_secondary-transparent-20;
+        transition: all 5ms ease-in-out;
+      }
+    }
+  }
+  &-tertiary {
+    background-color: $c_tertiary;
+    border-color: $c_tertiary;
+    &:hover {
+      background-color: $c_tertiary-600;
+    }
+    &:active {
+      background-color: $c_tertiary-800;
+      transition: all 5ms ease-in-out;
+    }
+    &-outlined {
+      @include outlined;
+      color: $c_tertiary;
+      border-color: $c_tertiary;
+
+      &:hover {
+        background-color: $c_tertiary-transparent-10;
+      }
+      &:active {
+        background-color: $c_tertiary-transparent-20;
+        transition: all 5ms ease-in-out;
+      }
+    }
+  }
+  &-error {
+    background-color: $c_error;
+    border-color: $c_error;
+    &:hover {
+      background-color: $c_error-600;
+    }
+    &:active {
+      background-color: $c_error-800;
+      transition: all 5ms ease-in-out;
+    }
+    &-outlined {
+      @include outlined;
+      color: $c_error;
+      border-color: $c_error;
+
+      &:hover {
+        background-color: $c_error-transparent-10;
+      }
+      &:active {
+        background-color: $c_error-transparent-20;
+        transition: all 5ms ease-in-out;
+      }
+    }
+  }
+  &-alert {
+    background-color: $c_alert;
+    border-color: $c_alert;
+    &:hover {
+      background-color: $c_alert-600;
+    }
+    &:active {
+      background-color: $c_alert-800;
+      transition: all 5ms ease-in-out;
+    }
+    &-outlined {
+      @include outlined;
+      color: $c_alert;
+      border-color: $c_alert;
+
+      &:hover {
+        background-color: $c_alert-transparent-10;
+      }
+      &:active {
+        background-color: $c_alert-transparent-20;
+        transition: all 5ms ease-in-out;
+      }
+    }
+  }
+
+  &-icon {
+    padding: 16px;
+    aspect-ratio: 1;
+    font-size: 24px;
+    line-height: 0;
+    vertical-align: sub;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &-rg {
+      padding-right: 39px;
+      * {
+        vertical-align: sub;
+      }
+      svg {
+        margin-left: 12px;
+      }
+    }
+    &-lf {
+      padding-left: 39px;
+      * {
+        vertical-align: sub;
+      }
+      svg {
+        margin-right: 12px;
+      }
     }
   }
 }

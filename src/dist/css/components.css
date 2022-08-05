@@ -2,7 +2,6 @@
   display: inline-block;
   border: none;
   color: #fff;
-  background-color: #0054d1;
   padding: 16px 46px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -28,6 +27,11 @@
   transition: all 5ms ease-in-out;
 }
 
+.btn:disabled {
+  background-color: #5e5e5e;
+  color: #898989;
+}
+
 .btn-xs {
   padding: 4px 12px;
 }
@@ -38,6 +42,7 @@
 
 .btn-lg {
   padding: 20px 58px;
+  font-size: 18px;
 }
 
 .btn-full-w {
@@ -60,20 +65,210 @@
   border-radius: 120px;
 }
 
-.btn-outlined {
+.btn-primary {
+  background-color: #0054d1;
+  border-color: #0054d1;
+}
+
+.btn-primary:hover {
+  background-color: #0047b0;
+}
+
+.btn-primary:active {
+  background-color: #003a90;
+  -webkit-transition: all 5ms ease-in-out;
+  transition: all 5ms ease-in-out;
+}
+
+.btn-primary-outlined {
   background-color: transparent;
   border-width: 1px;
   border-style: solid;
-  border-color: #0054d1;
   color: #0054d1;
 }
 
-.btn-outlined:hover {
+.btn-primary-outlined:hover {
   background-color: rgba(0, 84, 209, 0.1);
 }
 
-.btn-outlined:active {
+.btn-primary-outlined:active {
   background-color: rgba(0, 84, 209, 0.2);
+  -webkit-transition: all 5ms ease-in-out;
+  transition: all 5ms ease-in-out;
+}
+
+.btn-primary--shadow {
+  -webkit-box-shadow: 0px 6px 4px -4px rgba(0, 44, 111, 0.4);
+          box-shadow: 0px 6px 4px -4px rgba(0, 44, 111, 0.4);
+}
+
+.btn-secondary {
+  background-color: #e40066;
+  border-color: #e40066;
+}
+
+.btn-secondary:hover {
+  background-color: #bb0054;
+}
+
+.btn-secondary:active {
+  background-color: #6a002f;
+  -webkit-transition: all 5ms ease-in-out;
+  transition: all 5ms ease-in-out;
+}
+
+.btn-secondary-outlined {
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  color: #e40066;
+  border-color: #e40066;
+}
+
+.btn-secondary-outlined:hover {
+  background-color: rgba(228, 0, 103, 0.1);
+}
+
+.btn-secondary-outlined:active {
+  background-color: rgba(228, 0, 103, 0.2);
+  -webkit-transition: all 5ms ease-in-out;
+  transition: all 5ms ease-in-out;
+}
+
+.btn-tertiary {
+  background-color: #3bcc86;
+  border-color: #3bcc86;
+}
+
+.btn-tertiary:hover {
+  background-color: #32ad71;
+}
+
+.btn-tertiary:active {
+  background-color: #1f6e48;
+  -webkit-transition: all 5ms ease-in-out;
+  transition: all 5ms ease-in-out;
+}
+
+.btn-tertiary-outlined {
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  color: #3bcc86;
+  border-color: #3bcc86;
+}
+
+.btn-tertiary-outlined:hover {
+  background-color: rgba(59, 204, 134, 0.1);
+}
+
+.btn-tertiary-outlined:active {
+  background-color: rgba(59, 204, 134, 0.2);
+  -webkit-transition: all 5ms ease-in-out;
+  transition: all 5ms ease-in-out;
+}
+
+.btn-error {
+  background-color: #f8333c;
+  border-color: #f8333c;
+}
+
+.btn-error:hover {
+  background-color: #d92931;
+}
+
+.btn-error:active {
+  background-color: #9a161c;
+  -webkit-transition: all 5ms ease-in-out;
+  transition: all 5ms ease-in-out;
+}
+
+.btn-error-outlined {
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  color: #f8333c;
+  border-color: #f8333c;
+}
+
+.btn-error-outlined:hover {
+  background-color: rgba(248, 51, 61, 0.1);
+}
+
+.btn-error-outlined:active {
+  background-color: rgba(248, 51, 61, 0.2);
+  -webkit-transition: all 5ms ease-in-out;
+  transition: all 5ms ease-in-out;
+}
+
+.btn-alert {
+  background-color: #fcab10;
+  border-color: #fcab10;
+}
+
+.btn-alert:hover {
+  background-color: #d6910d;
+}
+
+.btn-alert:active {
+  background-color: #8b5e07;
+  -webkit-transition: all 5ms ease-in-out;
+  transition: all 5ms ease-in-out;
+}
+
+.btn-alert-outlined {
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  color: #fcab10;
+  border-color: #fcab10;
+}
+
+.btn-alert-outlined:hover {
+  background-color: rgba(252, 169, 16, 0.1);
+}
+
+.btn-alert-outlined:active {
+  background-color: rgba(252, 169, 16, 0.2);
+  -webkit-transition: all 5ms ease-in-out;
+  transition: all 5ms ease-in-out;
+}
+
+.btn-icon {
+  padding: 16px;
+  aspect-ratio: 1;
+  font-size: 24px;
+  line-height: 0;
+  vertical-align: sub;
+}
+
+.btn-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-icon-rg {
+  padding-right: 39px;
+}
+
+.btn-icon-rg * {
+  vertical-align: sub;
+}
+
+.btn-icon-rg svg {
+  margin-left: 12px;
+}
+
+.btn-icon-lf {
+  padding-left: 39px;
+}
+
+.btn-icon-lf * {
+  vertical-align: sub;
+}
+
+.btn-icon-lf svg {
+  margin-right: 12px;
 }
 
 * {
