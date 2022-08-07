@@ -27,6 +27,8 @@ $btn_border_width: 1px;
 // ============ colors
 $btn_c_disabled: #5e5e5e;
 $btn_c_disabled_text: #898989;
+// ============ box shadow
+$btn_box_shadow: 0px 6px 4px -4px;
 
 // %outlined {
 //   background-color: transparent;
@@ -71,7 +73,21 @@ $btn_c_disabled_text: #898989;
   }
   &:disabled {
     background-color: $btn_c_disabled;
+    border-color: $btn_c_disabled;
     color: $btn_c_disabled_text;
+    box-shadow: none;
+
+    &:hover {
+      background-color: $btn_c_disabled;
+      border-color: $btn_c_disabled;
+      color: $btn_c_disabled_text;
+    }
+    &:active {
+      background-color: $btn_c_disabled;
+      border-color: $btn_c_disabled;
+      color: $btn_c_disabled_text;
+    }
+    cursor: not-allowed;
   }
 
   // -----------------------------------------------------------------------------
@@ -131,7 +147,8 @@ $btn_c_disabled_text: #898989;
       }
     }
     &--shadow {
-      box-shadow: 0px 6px 4px -4px rgba(0, 44, 111, 0.4);
+      box-shadow: $btn_box_shadow
+        adjust-color($color: $c_primary-800, $alpha: -0.6);
     }
   }
   &-secondary {
@@ -157,6 +174,10 @@ $btn_c_disabled_text: #898989;
         transition: all 5ms ease-in-out;
       }
     }
+    &--shadow {
+      box-shadow: $btn_box_shadow
+        adjust-color($color: $c_secondary-800, $alpha: -0.6);
+    }
   }
   &-tertiary {
     background-color: $c_tertiary;
@@ -180,6 +201,10 @@ $btn_c_disabled_text: #898989;
         background-color: $c_tertiary-transparent-20;
         transition: all 5ms ease-in-out;
       }
+    }
+    &--shadow {
+      box-shadow: $btn_box_shadow
+        adjust-color($color: $c_tertiary-800, $alpha: -0.6);
     }
   }
   &-error {
@@ -205,6 +230,10 @@ $btn_c_disabled_text: #898989;
         transition: all 5ms ease-in-out;
       }
     }
+    &--shadow {
+      box-shadow: $btn_box_shadow
+        adjust-color($color: $c_error-800, $alpha: -0.6);
+    }
   }
   &-alert {
     background-color: $c_alert;
@@ -228,6 +257,10 @@ $btn_c_disabled_text: #898989;
         background-color: $c_alert-transparent-20;
         transition: all 5ms ease-in-out;
       }
+    }
+    &--shadow {
+      box-shadow: $btn_box_shadow
+        adjust-color($color: $c_alert-800, $alpha: -0.6);
     }
   }
 
